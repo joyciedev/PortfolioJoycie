@@ -3,14 +3,20 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-  "dev": "vite",
-  "build": "vite build"
-},
+    "dev": "vite",
+    "build": "npx vite build"
+  },
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
     "@tailwindcss/cli": "^4.1.16",
+    "axios": "^1.13.2",
     "tailwindcss": "^4.1.16"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.1.17",
+    "laravel-vite-plugin": "^2.0.1",
+    "vite": "^7.2.2"
   }
 }
