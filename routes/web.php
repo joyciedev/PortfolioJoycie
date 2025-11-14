@@ -7,10 +7,6 @@ Route::get('/', function () {
     return view('portfolio');
 });
 
-Route::get('/testlaravel', function () {
-    return view('test');
-});
-
 Route::get('/contact_create', [ContactController::class, 'create'])->name('portfolio.create');
 
 Route::post('/contact_store', [ContactController::class, 'store'])->name('portfolio.store');
