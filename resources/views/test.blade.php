@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{{asset('css/output.css')}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="{{asset('resources/css/input.css')}}">
+    <title>Mon premier test</title>
+</head>
+<body>
+
+
+    {{-- Header --}}
+
+    <header id="navbar" class=" bg-amber-500 fixed w-full top-0 left-0 z-50">
+        <nav class=" container flex items-center justify-between h-16 sm:h-20">
+
+            <div id="nav-menu" class=" absolute top-0 left-[-100%] min-h-[80vh] w-full bg-amber-400 flex items-center justify-center duration-300 overflow-hidden lg:static lg:min-h-fit lg:bg-transparent lg:w-auto">
+
+                <ul class="flex p-32 items-center gap-8 lg:flew-row ">
+
+                    <li>
+                        <a href="#" class="nav-link">Home</a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="nav-link">About</a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="nav-link">Popular</a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="nav-link">Review</a>
+                    </li>
+                </ul>
+
+                <div class=" absolute bottom-0 -right-10 opacity-90 lg:hidden">
+                    <img src="{{asset('images/laravel.png')}}" class=" w-32" alt="logo laravel">
+                </div>
+
+                <div class=" absolute  -top-5 -left-5 rotate-90 opacity-90 lg:hidden">
+                    <img src="{{asset('images/tailwind.png')}}" class=" w-32" alt="logo tailwind">
+                </div>
+
+            </div>
+
+            <div id="hamburger" class=" text-xl p-20 sm:text-3xl cursor-pointer z-50 lg:hidden ">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+
+
+    <script>
+        const navMenu = document.getElementById("nav-menu")
+        const navLink = document.querySelectorAll(".nav-link")
+        const hamburger = document.getElementById("hamburger")
+
+        hamburger.addEvenListener("click", () => {
+            navMenu.class.toggle("left-[0]")
+            hamburger.classList.toggle('fa-solid fa-xmark')
+        })
+
+        navLink.forEach(link => {
+            link.addEvenListener("click", () => {
+                navMenu.classList.toggle("left-[0]")
+                hamburger.classList.toggle('fa-solid fa-xmark')
+            })
+        })
+    </script>
+</body>
+</html>
