@@ -5,7 +5,7 @@ use App\Http\Controllers\ContactController;
 
 Route::get('/', function () {
     return view('portfolio');
-});
+}); 
 
 Route::get('/contact_create', [ContactController::class, 'create'])->name('portfolio.create');
 
